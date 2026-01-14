@@ -8,6 +8,30 @@ Este repositorio es un resumen de las herramientas más utilizadas en **ArcGIS P
 ---
 <br>
 
+## 🛠 Data Management toolbox
+
+Las herramientas del conjunto de herramientas Extraer permiten seleccionar entidades y atributos en una clase de entidad o una tabla basándose en una consulta (expresión SQL) o una extracción espacial y de atributo. Las entidades y atributos de salida se almacenan en una clase de entidad o una tabla.
+
+### 1. Add Field  |  Añadir Campo
+Agrega un nuevo campo a una tabla o a la tabla de una clase de entidad o capa de entidades, así como a rásteres con tablas de atributos.
+- **Herramienta:** `Data Management Tools -> Fields -> Add Field`
+- **Python:** `arcpy.management.AddField(in_table, field_name, field_type, {field_precision}, {field_scale}, {field_length}, {field_alias}, {field_is_nullable}, {field_is_required}, {field_domain})`
+
+```python
+arcpy.management.AddField(
+    in_table=r"ACCIDENTES_CA_PANAMERICANA\ACCIDENTES_CA_PANAMERICAN",
+    field_name="NuevaColumna",
+    field_type="SHORT",
+    field_precision=None,
+    field_scale=None,
+    field_length=None,
+    field_alias="Nueva Columna",
+    field_is_nullable="NULLABLE",
+    field_is_required="NON_REQUIRED",
+    field_domain=""
+)
+```
+
 ## 🛠 Analysis toolbox
 
 Las herramientas del conjunto de herramientas Extraer permiten seleccionar entidades y atributos en una clase de entidad o una tabla basándose en una consulta (expresión SQL) o una extracción espacial y de atributo. Las entidades y atributos de salida se almacenan en una clase de entidad o una tabla.
